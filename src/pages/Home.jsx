@@ -26,7 +26,7 @@ const Home = () => {
     setLoading(true);
     if(ud === true){
       axios
-        .get('http://localhost:555/app/books/')
+        .get('http://localhost:5555/app/books/')
         .then((res) =>{
           setBooks(res.data);
           setLoading(false);
@@ -38,7 +38,7 @@ const Home = () => {
     }
     else if(ao === true){
       axios
-        .get('http://localhost:555/app/books/')
+        .get('http://localhost:5555/app/books/')
         .then((res) => {
           const alphabet = res.data.sort((a,b) => a.title.localeCompare(b.title));
           setBooks(alphabet)
@@ -51,7 +51,7 @@ const Home = () => {
     }
     else if(rd === true){
       axios
-        .get("http://localhost:555/app/books/")
+        .get("http://localhost:5555/app/books/")
         .then((res) => {
           const date = res.data.sort((a,b) => a.yearPublish - b.yearPublish);
           setBooks(date);
