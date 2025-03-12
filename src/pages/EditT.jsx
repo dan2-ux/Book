@@ -14,7 +14,7 @@ function EditT({id}){
         }
         sLoading(true)
         axios
-            .put(`http://localhost:555/app/books/${id}`, data)
+            .put(`http://localhost:5555/app/books/${id}`, data)
             .then(() => {
                 sLoading(false);
                 navigate(0);
