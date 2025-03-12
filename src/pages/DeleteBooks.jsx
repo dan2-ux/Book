@@ -11,7 +11,7 @@ const DeleteBooks = () => {
   const navigate = useNavigate()
   useEffect(() => {
     axios
-      .get(`http://localhost:555/app/books/${id}`)
+      .get(`http://localhost:5555/app/books/${id}`)
       .then((res) => {
         sBook(res.data)
       })
@@ -22,7 +22,7 @@ const DeleteBooks = () => {
   console.log(book)
   function doDelete(){
     axios
-      .delete(`http://localhost:555/app/books/${id}`,)
+      .delete(`http://localhost:5555/app/books/${id}`,)
       .then(() => {
         <Spiner/>
         navigate('/')
